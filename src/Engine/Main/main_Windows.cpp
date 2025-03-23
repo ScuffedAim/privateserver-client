@@ -51,7 +51,7 @@ PGPI g_GetPointerInfo = (PGPI)GetProcAddress(GetModuleHandle(TEXT("user32.dll"))
 #include "WinEnvironment.h"
 #include "WinGLLegacyInterface.h"
 
-#define WINDOW_TITLE L"neosu"
+#define WINDOW_TITLE L"scuffedaim"
 #define WM_NEOSU_PROTOCOL (WM_USER + 1)
 
 #define WINDOW_WIDTH 1280

@@ -28,7 +28,7 @@ struct Bancho {
     UString server_icon_url;
     Image *server_icon = NULL;
 
-    ServerPolicy score_submission_policy = ServerPolicy::NO_PREFERENCE;
+    ServerPolicy score_submission_policy = ServerPolicy::YES;
     bool submit_scores();
 
     UString user_agent;

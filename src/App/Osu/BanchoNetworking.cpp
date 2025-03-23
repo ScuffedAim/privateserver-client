@@ -112,7 +112,7 @@ void disconnect() {
         var->resetDefaults();
     }
 
-    bancho.score_submission_policy = ServerPolicy::NO_PREFERENCE;
+    bancho.score_submission_policy = ServerPolicy::YES;
     osu->optionsMenu->updateLayout();
 
     osu->optionsMenu->logInButton->setText("Log in");

@@ -109,7 +109,7 @@ Osu::Osu() {
     this->experimentalMods.push_back(&cv_mod_shirone);
     this->experimentalMods.push_back(&cv_mod_approach_different);
 
-    env->setWindowTitle("neosu");
+    env->setWindowTitle("ScuffedAim");
     env->setCursorVisible(false);
 
     engine->getConsoleBox()->setRequireShiftToActivate(true);

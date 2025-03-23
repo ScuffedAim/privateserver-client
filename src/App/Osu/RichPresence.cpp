@@ -19,7 +19,7 @@
 const UString RichPresence::KEY_DISCORD_STATUS = "state";
 const UString RichPresence::KEY_DISCORD_DETAILS = "details";
 
-UString last_status = "[neosu]\nWaking up";
+UString last_status = "[scuffedaim]\nWaking up";
 Action last_action = IDLE;
 
 void crop_to(UString str, char* output, int max_len) {
@@ -70,7 +70,7 @@ void RichPresence::setBanchoStatus(const char* info_text, Action action) {
     }
 
     char fancy_text[1024] = {0};
-    snprintf(fancy_text, 1023, "[neosu]\n%s", info_text);
+    snprintf(fancy_text, 1023, "[scuffedaim]\n%s", info_text);
 
     last_status = fancy_text;
     last_action = action;
@@ -155,7 +155,7 @@ void RichPresence::onSongBrowser() {
     }
 
     set_discord_presence(&activity);
-    env->setWindowTitle("neosu");
+    env->setWindowTitle("ScuffedAim");
 }
 
 void RichPresence::onPlayStart() {
@@ -192,7 +192,7 @@ void RichPresence::onPlayStart() {
     }
 
     // also update window title
-    auto windowTitle = UString::format("neosu - %s", activity.details);
+    auto windowTitle = UString::format("scuffedaim - %s", activity.details);
     env->setWindowTitle(windowTitle);
 
     set_discord_presence(&activity);

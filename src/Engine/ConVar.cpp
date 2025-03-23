@@ -1444,7 +1444,7 @@ ConVar cv_main_menu_banner_ifupdatedfromoldversion_text("osu_main_menu_banner_if
                                                         FCVAR_BANCHO_COMPATIBLE);
 ConVar cv_main_menu_friend("osu_main_menu_friend", true, FCVAR_BANCHO_COMPATIBLE);
 ConVar cv_main_menu_startup_anim_duration("osu_main_menu_startup_anim_duration", 0.25f, FCVAR_BANCHO_COMPATIBLE);
-ConVar cv_main_menu_use_server_logo("main_menu_use_server_logo", true, FCVAR_BANCHO_COMPATIBLE);
+ConVar cv_main_menu_use_server_logo("main_menu_use_server_logo", false, FCVAR_BANCHO_COMPATIBLE);
 ConVar cv_minimize_on_focus_lost_if_borderless_windowed_fullscreen(
     "minimize_on_focus_lost_if_borderless_windowed_fullscreen", false, FCVAR_BANCHO_COMPATIBLE);
 ConVar cv_minimize_on_focus_lost_if_fullscreen("minimize_on_focus_lost_if_fullscreen", true, FCVAR_BANCHO_COMPATIBLE);
@@ -1565,7 +1565,7 @@ ConVar cv_mouse_raw_input_absolute_to_window("mouse_raw_input_absolute_to_window
 ConVar cv_mouse_sensitivity("mouse_sensitivity", 1.0f, FCVAR_BANCHO_COMPATIBLE);
 ConVar cv_mp_autologin("mp_autologin", false, FCVAR_BANCHO_COMPATIBLE | FCVAR_PRIVATE);
 ConVar cv_mp_password("mp_password", "", FCVAR_BANCHO_COMPATIBLE | FCVAR_PRIVATE | FCVAR_HIDDEN);
-ConVar cv_mp_server("mp_server", "akatsuki.gg", FCVAR_BANCHO_COMPATIBLE | FCVAR_PRIVATE);
+ConVar cv_mp_server("mp_server", "scuffedaim.xyz", FCVAR_BANCHO_COMPATIBLE | FCVAR_PRIVATE);
 ConVar cv_name("name", "Guest", FCVAR_BANCHO_COMPATIBLE | FCVAR_PRIVATE);
 ConVar cv_nightcore_enjoyer("nightcore_enjoyer", false, FCVAR_BANCHO_COMPATIBLE);
 ConVar cv_normalize_loudness("normalize_loudness", true, FCVAR_BANCHO_COMPATIBLE, "normalize loudness across songs");

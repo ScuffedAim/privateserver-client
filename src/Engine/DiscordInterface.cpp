@@ -132,7 +132,7 @@ void set_discord_presence(struct DiscordActivity *activity) {
     // currently unused. should be lobby id, etc
 
     activity->application_id = DISCORD_CLIENT_ID;
-    strcpy(activity->name, "neosu");
+    strcpy(activity->name, "ScuffedAim private server");
     strcpy(activity->assets.large_image, "neosu_icon");
     activity->assets.large_text[0] = '\0';
     strcpy(activity->assets.small_image, "None");

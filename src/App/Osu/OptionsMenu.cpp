@@ -1213,10 +1213,10 @@ OptionsMenu::OptionsMenu() : ScreenBackable() {
     this->sectionOnline = this->addSection("Online");
 
     this->addSubSection("Online server");
-    this->addLabel("If the server admins don't explicitly allow neosu,")->setTextColor(0xff666666);
-    this->addLabel("you might get banned!")->setTextColor(0xff666666);
+    //this->addLabel("If the server admins don't explicitly allow neosu,")->setTextColor(0xff666666);
+    //this->addLabel("you might get banned!")->setTextColor(0xff666666);
     this->addLabel("");
-    this->serverTextbox = this->addTextbox(cv_mp_server.getString(), &cv_mp_server);
+    //this->serverTextbox = this->addTextbox(cv_mp_server.getString(), &cv_mp_server);
     this->submitScoresCheckbox = this->addCheckbox("Submit scores", &cv_submit_scores);
     this->elements.back().render_condition = RenderCondition::SCORE_SUBMISSION_POLICY;
 
@@ -1504,7 +1504,7 @@ void OptionsMenu::mouse_update(bool *propagate_clicks) {
 
     cv_name.setValue(this->nameTextbox->getText());
     cv_mp_password.setValue(this->passwordTextbox->getText());
-    cv_mp_server.setValue(this->serverTextbox->getText());
+    //cv_mp_server.setValue(this->serverTextbox->getText());
     if(this->nameTextbox->hitEnter()) {
         cv_name.setValue(this->nameTextbox->getText());
         this->nameTextbox->stealFocus();
@@ -1514,11 +1514,12 @@ void OptionsMenu::mouse_update(bool *propagate_clicks) {
         this->passwordTextbox->stealFocus();
         reconnect();
     }
+    /*
     if(this->serverTextbox->hitEnter()) {
         this->serverTextbox->stealFocus();
         reconnect();
     }
-
+	*/
     if(this->dpiTextbox != NULL && this->dpiTextbox->hitEnter()) this->updateFposuDPI();
     if(this->cm360Textbox != NULL && this->cm360Textbox->hitEnter()) this->updateFposuCMper360();
 }
@@ -1531,12 +1532,13 @@ void OptionsMenu::onKeyDown(KeyboardEvent &e) {
 
     // KEY_TAB doesn't work on Linux
     if(e.getKeyCode() == 65056 || e.getKeyCode() == KEY_TAB) {
-        if(this->serverTextbox->isActive()) {
+        /*
+		if(this->serverTextbox->isActive()) {
             this->serverTextbox->stealFocus();
             this->nameTextbox->focus();
             e.consume();
             return;
-        } else if(this->nameTextbox->isActive()) {
+        } else */ if(this->nameTextbox->isActive()) {
             this->nameTextbox->stealFocus();
             this->passwordTextbox->focus();
             e.consume();
